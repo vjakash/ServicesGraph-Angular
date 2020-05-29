@@ -1,0 +1,31 @@
+<app-menu></app-menu>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <h1>Create User</h1>
+        </div>
+    </div>
+    <form [formGroup]="userData" (ngSubmit)='createData()'>
+        <div class="row">
+            <div class="col-lg-4">
+                <label for="">Name</label>
+                <input type="text" class="form-control" formControlName="name">
+            </div>
+            <div class="col-lg-4">
+                <label for="">E-mail</label>
+                <input type="text" class="form-control" formControlName="email">
+            </div>
+            <div class="col-lg-4">
+                <label for="">Phone</label>
+                <input type="number" class="form-control" formControlName="phone">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-lg-12">
+                <input type="submit" value="Submit" class="btn btn-dark">
+            </div>
+        </div>
+    </form>
+</div>
