@@ -11,6 +11,7 @@ import {ReactiveFormsModule,FormsModule} from '@angular/forms';
 import { EditComponent } from './edit/edit.component';
 import { GraphsComponent } from './graphs/graphs.component';
 import { NgChartjsModule } from 'ng-chartjs';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,7 @@ import { NgChartjsModule } from 'ng-chartjs';
     FormsModule,
     NgChartjsModule
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy,useClass:HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
