@@ -30,6 +30,7 @@ export class EditComponent implements OnInit {
 
   ngOnInit(): void {}
   updateData() {
+    this.service.updateSample(this.currentIndex);
     this.service.updateData(this.currentIndex,this.userData.value).subscribe(()=>{
       this.router.navigate(['/']);
     })

@@ -8,7 +8,11 @@ import {UserService} from '../user.service';
 })
 export class ListComponent implements OnInit {
 userData;
+sample;
   constructor(private service:UserService) {
+    this.service.getSample().subscribe((data)=>{
+      this.sample=data;
+    })
     this.loadData();
   }
   ngOnInit(): void {
